@@ -1,28 +1,41 @@
-# 🧠 AI Study Assistant
+# ✦ StudyGenie — AI Study Assistant
+### Powered by Google Gemini 1.5 Flash
 
-An AI-powered study tool built with React.js and the Google Gemini API.
+A fully Google-powered AI study tool with 6 features built with React.
 
 ## Features
-- 📄 **Content Analysis** — Extracts subject, difficulty, key points & concepts
-- ✏️ **Quiz Generator** — Creates 5 multiple-choice questions with scoring
-- 💬 **AI Tutor Chat** — Multi-turn conversation with context awareness
-- 📊 **Smart Summary** — One-liner, bullet points, study tips & related topics
+| Feature | Description |
+|---------|-------------|
+| 📊 Analyze | Deep AI breakdown — subject, concepts, exam tips |
+| 🧩 Quiz | 6 auto-generated multiple-choice questions with scoring |
+| 💬 Chat | Multi-turn AI tutor powered by Gemini |
+| 📝 Summary | TL;DR, key points, study tips, related topics |
+| 🗺️ Mind Map | Visual concept map of your material |
+| 🔥 Flashcards | 10 flip-card memory cards |
 
 ## Setup
 
+### Get a Free Google AI Key
+1. Go to **https://aistudio.google.com/app/apikey**
+2. Sign in with your Google account
+3. Click **Create API key**
+4. Copy the key (starts with `AIza...`)
+
 ### Local Development
-1. Clone / unzip the project
-2. Run `npm install`
-3. Run `npm start`
-4. Enter your Google AI API key in the app banner (get one free at https://aistudio.google.com/app/apikey)
+```bash
+npm install
+npm start
+```
+Paste your key in the app header when it loads.
 
 ### Netlify Deployment
-1. Push to GitHub or drag-and-drop this folder into Netlify
-2. In Netlify → Site Settings → Environment Variables, add:
-   - `GOOGLE_API_KEY` = your Google AI API key
-3. Deploy — build command is `npm run build`, publish dir is `build`
+1. Push to GitHub or drag this folder into Netlify
+2. Go to **Site Settings → Environment Variables**
+3. Add: `GOOGLE_API_KEY` = your Google AI key
+4. Deploy — build command: `npm run build`, publish dir: `build`
 
 ## Tech Stack
 - React 18
 - Google Gemini 1.5 Flash API
-- Netlify Functions (serverless backend)
+- Google Sans font
+- Netlify Functions (optional secure proxy)
