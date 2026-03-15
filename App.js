@@ -1,6 +1,6 @@
 // ============================================================
 //  StudyGenie — AI Study Assistant
-//  Built with React + Google Gemini 1.5 Flash API
+//  Built with React + Google Gemini 2.0 Flash API
 //  Design: Google Material You · Gemini branding
 // ============================================================
 
@@ -16,7 +16,7 @@ async function callGemini(apiKey, system, userMsg, history = []) {
     { role: "user", parts: [{ text: userMsg }] },
   ];
   const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -249,7 +249,7 @@ Generate 10 flashcards covering key terms, concepts, and facts.`;
         {/* Gemini badge */}
         <div style={{ display:"flex", alignItems:"center", gap:6, marginLeft:8, padding:"5px 12px", borderRadius:20, background:G.surf2, border:`1px solid ${G.border}` }}>
           <span style={{ fontSize:13 }}>✦</span>
-          <span style={{ fontSize:11, color:G.dim, fontFamily:"monospace" }}>Gemini 1.5 Flash</span>
+          <span style={{ fontSize:11, color:G.dim, fontFamily:"monospace" }}>Gemini 2.0 Flash</span>
         </div>
 
         <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:10 }}>
